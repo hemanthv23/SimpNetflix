@@ -1,0 +1,114 @@
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(netflix-background.jpg);
+  background-size: cover;
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Roboto, sans-serif;
+}
+
+.nf {
+  background: #000;
+}
+
+.container {
+  top: 80px;
+  position: relative;
+  width: 340px;
+  height: 510px;
+  background-color: #000;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.h-img {
+  position: absolute;
+  top: -60px;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("hero.jpg") center/cover;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(to top, #000 35%, transparent);
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  /* font-family: sans-serif; */
+}
+
+form {
+  width: 260px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+form input,
+button {
+  border: none;
+  height: 40px;
+  outline: none;
+  border-radius: 6px;
+}
+
+form input {
+  width: 260px;
+  margin: 5px 0;
+  background-color: #333333;
+  padding: 0 10px;
+}
+
+form input::placeholder {
+  font-family: inherit;
+}
+
+form input:focus {
+  color: #fff;
+}
+
+form button {
+  background-color: #e50813;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.content p {
+  width: 260px;
+  color: #737373;
+  font-size: 12px;
+  margin: 0;
+}
+
+.content p a {
+  text-decoration: none;
+  color: #fff;
+}
